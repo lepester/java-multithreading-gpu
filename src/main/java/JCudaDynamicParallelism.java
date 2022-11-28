@@ -28,8 +28,8 @@ public class JCudaDynamicParallelism {
         CUfunction function = new CUfunction();
         cuModuleGetFunction(function, module, "parentKernel");
 
-        int numParentThreads = 3;
-        int numChildThreads = 1;
+        int numParentThreads = 8;
+        int numChildThreads = 0;
 
         int numElements = numParentThreads * numChildThreads;
         CUdeviceptr deviceData = new CUdeviceptr();
